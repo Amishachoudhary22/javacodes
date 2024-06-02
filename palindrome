@@ -1,0 +1,19 @@
+public class Solution {
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String nA="";
+        for(int i=0; i<A.length(); i++){
+           char ch=A.charAt(i);
+           nA= ch+nA; 
+        }
+         //System.out.print(nA);
+        if(nA==A){
+            System.out.print("Yes");
+        }
+        else{
+            System.out.print("No");
+        }
+    }
+}
