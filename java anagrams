@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Solution {
+
+    static boolean isAnagram(String a, String b) {
+    // Complete the function
+    a = a.toLowerCase();
+    b = b.toLowerCase();
+
+    if(a.length() != b.length()) return false; 
+    int[] freq1 = new int[256];
+    int[] freq2 = new int[256]; 
+
+    for (char c : a.toCharArray()) {
+        if(Character.isLetter(c))
+            freq1[c]++;
+    }
+
+    for (char c : b.toCharArray()) {
+        if(Character.isLetter(c))
+            freq2[c]++;
+    }
+
+    for (int i = 0; i < 256; i++) {
+        if (freq1[i] != freq2[i])
+            return false;
+    }
+
+    return true;
+    }
+
+    public static void main(String[] args) {
